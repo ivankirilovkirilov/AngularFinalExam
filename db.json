@@ -20,6 +20,17 @@
     }
   ],
   "users": [
-    
+    {
+      "email": "ivankirilovkirilov123@gmail.com",
+      "password": "$2a$10$npyXWGtpLGC/hRASIrWG..sNzyjztrKbxs0yYPDEvCHH5Dlh/6j.e",
+      "isAdmin": false,
+      "id": 1
+    },
+    {
+      "email": "ivankirilovkirilov123@gmail.coma",
+      "password": "$2a$10$INDYyAVbJOr9vDItZImWpOE5MOm19o3MQd267kk2y1BnE7auj.wvC",
+      "isAdmin": false,
+      "id": 2
+    }
   ]
 }

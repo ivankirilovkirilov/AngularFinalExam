@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -12,21 +11,16 @@ import { TasksComponent } from './components/tasks/tasks.component';
 import { TaskItemComponent } from './components/task-item/task-item.component';
 import { AddTaskComponent } from './components/add-task/add-task.component';
 import { AboutComponent } from './components/about/about.component';
-import { RegisterComponent } from './components/register/register.component';
+import { RegisterComponent } from './auth/register/register.component';
 import { NavComponent } from './components/nav/nav.component';
-import { LoginComponent } from './components/auth/login/login.component';
+import { LoginComponent } from './auth/login/login.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { AppRoutingModule } from './app-routing.module';
+import { AdminModule } from './admin/admin.module';
+import { AuthModule } from './auth/auth.module';
 
 
-const appRoutes: Routes = [
-  {path: '', redirectTo: 'tasks', pathMatch: 'full'},
-  {path: 'about', component: AboutComponent},
-  {path: 'login', component: LoginComponent},
-  {path: 'register', component: RegisterComponent},
-  {path: 'tasks', component: TasksComponent},
-  {path: '**', component: PageNotFoundComponent},
-  
-]
+
 
 @NgModule({
   declarations: [
@@ -47,7 +41,11 @@ const appRoutes: Routes = [
     FontAwesomeModule,
     HttpClientModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes, {enableTracing: true})
+    AdminModule,
+    AuthModule,
+
+
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
