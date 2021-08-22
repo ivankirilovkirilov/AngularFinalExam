@@ -11,6 +11,7 @@ import { Task } from 'src/app/Task';
 export class AddTaskComponent implements OnInit {
   @Output() onAddTask: EventEmitter<Task> = new EventEmitter();
 
+  uid: number = parseInt(JSON.stringify(localStorage.getItem('id')).replace("\"", ""));
   text!: string;
   day!: string;
   reminder: boolean = false;
@@ -32,7 +33,10 @@ export class AddTaskComponent implements OnInit {
       return;
     }
 
+    //console.log(this.uid, "1", 1)
+    //alert(this.uid);
     const newTask: Task = {
+      uid: this.uid,
       text: this.text,
       day: this.day,
       reminder: this.reminder,
