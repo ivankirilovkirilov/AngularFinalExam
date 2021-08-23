@@ -18,6 +18,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { AppRoutingModule } from './app-routing.module';
 import { AdminModule } from './admin/admin.module';
 import { AuthModule } from './auth/auth.module';
+import { ProfileComponent } from './components/profile/profile.component';
 
 
 
@@ -34,7 +35,8 @@ import { AuthModule } from './auth/auth.module';
     RegisterComponent,
     NavComponent,
     LoginComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

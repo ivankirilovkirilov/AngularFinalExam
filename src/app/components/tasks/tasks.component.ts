@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { AuthService } from 'src/app/auth/services/auth.service';
 import { TaskService } from 'src/app/services/task.service';
 import { Task } from 'src/app/Task';
+import { User } from 'src/app/auth/User';
 
 @Component({
   selector: 'app-tasks',
@@ -12,20 +13,38 @@ import { Task } from 'src/app/Task';
 })
 export class TasksComponent implements OnInit {
   tasks: Task[] = [];
+  users: User[] = [];
 
   constructor(private authService: AuthService, private taskService: TaskService, private router: Router) { }
 
   ngOnInit(): void {
     this.taskService.getTasks().subscribe((tasks) => {
       this.tasks = tasks;
+      this.taskService.getUsers().subscribe((users) => {
+        this.users = users;
+        this.tasks.forEach((task) => {
+          this.users.forEach((user) => {
+            if (task.uid == user.id) {
+              task.username = user.email;
+            }
+          });
+        });
+      });
     });
+    
+   
   }
 
   deleteTask(task: Task) {
     if(this.authService.loggedIn()) {
-      this.taskService.deleteTask(task).subscribe(() => {
-        this.tasks = this.tasks.filter(t => t.id !== task.id);
-      });
+      if (localStorage.getItem("isAdmin") === "true" || parseInt(JSON.stringify(localStorage.getItem('id')).replace("\"", "")) === task.uid) {
+        this.taskService.deleteTask(task).subscribe(() => {
+          this.tasks = this.tasks.filter(t => t.id !== task.id);
+        });
+      } else {
+        alert("You don't have permissions to delete this Task!");
+      }
+      
     } else {
       alert("login first!");
       this.router.navigate(["/login"]);
@@ -35,9 +54,13 @@ export class TasksComponent implements OnInit {
 
   toggleReminder(task: Task) {
     if(this.authService.loggedIn()) {
-      task.reminder = !task.reminder;
-      //console.log(task.reminder);
-      this.taskService.updateTaskReminder(task).subscribe();
+      if (localStorage.getItem("isAdmin") === "true" || parseInt(JSON.stringify(localStorage.getItem('id')).replace("\"", "")) === task.uid) { 
+        task.reminder = !task.reminder;
+        //console.log(task.reminder);
+        this.taskService.updateTaskReminder(task).subscribe();
+      } else {
+        alert("You don't have permissions to toggle the reminder of this Task!");
+      }
     } else {
       alert("login first!");
       this.router.navigate(["/login"]);

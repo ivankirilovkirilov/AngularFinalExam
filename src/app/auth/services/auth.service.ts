@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { Observable, EMPTY } from 'rxjs';
 import { User } from '../User';
 
 
@@ -19,6 +20,14 @@ export class AuthService {
 
 
   redirrectUrl: string | null = null;
+
+  getUsers(): Observable<User[]> {
+    if (this.isAdmin()) {
+      const url = `${this.apiUrl}/users`;
+      return this.http.get<User[]>(url, httpOptions);
+    }
+    return EMPTY;
+  }
 
   loggedIn(): boolean {
     return !!localStorage.getItem("token");

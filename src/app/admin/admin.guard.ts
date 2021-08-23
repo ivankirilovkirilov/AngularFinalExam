@@ -20,7 +20,6 @@ export class AdminGuard implements CanActivate {
 
 
   isAdmin(url: string): true|UrlTree {
-    debugger;
     if (this.authService.isAdmin()) {
       //alert(next);
       

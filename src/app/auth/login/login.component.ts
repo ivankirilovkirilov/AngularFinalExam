@@ -18,13 +18,15 @@ export class LoginComponent {
   
 
   onSubmit() {
-    console.log(this.email);
+    //console.log(this.email);
     const tryToLoginUser: User = {
       email: this.email,
       password: this.password
     }
     this.authService.login(tryToLoginUser).subscribe((response) => {
-      console.log(response);
+      //console.log(response);
+      //debugger;
+      //localStorage.setItem("user", JSON.stringify(response.user))
       localStorage.setItem("id", response.user.id);
       localStorage.setItem("email", response.user.email);
       localStorage.setItem("isAdmin", response.user.isAdmin);
