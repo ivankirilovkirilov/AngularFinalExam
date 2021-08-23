@@ -1,5 +1,21 @@
 # Scheduler
 
+There are 3 parts of this application:
+
+- public (Guests)
+
+- private (Logged in users)
+
+- admin
+
+Public part can be seen from everyone. This is the 'tasks' page where everybody all tasks added from the users.
+
+Private part are registered users. They can create tasks and can toggle or delete all tasks that are created by them.
+
+Admin users are able to do everything. They can create, edit or delete tasks. Also they have full control over all other users.
+
+---
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.4.
 
 ## Development server
