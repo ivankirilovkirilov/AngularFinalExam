@@ -6,7 +6,7 @@
       "day": "May 5th at 2:30pm",
       "reminder": true,
       "id": 1,
-      "username": "You"
+      "username": "ivankirilovkirilov123@gmail.com"
     },
     {
       "uid": 1,
@@ -35,7 +35,7 @@
     {
       "email": "ivankirilov@gmail.com",
       "isAdmin": false,
-      "password": "$2a$10$y5ubAco2tuOVI58oScQziOak7s6s3DOYYj0pLfynSaDHTtie6RpAi",
+      "password": "$2a$10$8hyyqh.KkRsl1MnwVDX03eNgAZ/rvfiG.XbeQoXZPH/ZSUE/m7xcu",
       "id": 2
     }
   ]

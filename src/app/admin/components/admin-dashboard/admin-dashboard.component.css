@@ -1,0 +1,35 @@
+div {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+div div {
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    
+}
+
+div div h1 {
+    font-size: 30px;
+    background-color: #70e7a4;
+    padding: 20px;
+    margin: 0px;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    border: 1px solid black;
+    border-bottom: none;
+}
+
+div div p {
+    font-size: 40px;
+    margin: 0px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+    
+    border: 1px solid black;
+    border-top: none;
+}
+

@@ -1,2 +1,11 @@
-<p>Total number of tasks is {{ num_tasks }} review them <a href="/tasks">here</a>.</p>
-<p>Total number of users is {{ num_users }}.</p>
+
+<div>
+    <div [routerLink]="['/tasks']">
+        <h1>Total tasks</h1>
+        <p>{{ num_tasks }}</p>
+    </div>
+    <div [routerLink]="['/admin/users']">
+        <h1>Total users</h1>
+        <p>{{ num_users }}</p>
+    </div>
+</div>
