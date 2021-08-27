@@ -9,7 +9,7 @@ import { AboutComponent } from './components/about/about.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ProfileComponent } from './components/profile/profile.component';
 import { UsersGuard } from './users.guard';
-import { EditTaskComponent } from './admin/components/edit-task/edit-task.component';
+import { EditTaskComponent } from './components/edit-task/edit-task.component';
 
 const appRoutes: Routes = [
   {path: '', redirectTo: 'tasks', pathMatch: 'full'},

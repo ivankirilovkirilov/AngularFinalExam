@@ -1,1 +1,4 @@
-<p>You have {{ num_tasks }} tasks review them <a href="/tasks">here</a>.</p>
+<p>You have {{ num_tasks }} tasks</p>
+
+<app-task-item *ngFor="let task of tasks" [task]="task" [isViewerAdmin]="false" [isThisThePublisher]="true" (onToggleReminder)="toggleReminder(task)" (onDeleteTask)="deleteTask(task)">
+</app-task-item>

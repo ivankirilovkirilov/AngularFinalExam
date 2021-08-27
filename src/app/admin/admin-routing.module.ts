@@ -4,7 +4,7 @@ import { AdminDashboardComponent } from './components/admin-dashboard/admin-dash
 import { AdminComponent } from './components/admin/admin.component';
 import { AuthGuard } from '../auth/auth.guard';
 import { AdminGuard } from './admin.guard';
-import { EditTaskComponent } from './components/edit-task/edit-task.component';
+import { EditTaskComponent } from './../components/edit-task/edit-task.component';
 import { UsersComponent } from './components/users/users.component';
 import { EditUserComponent } from './components/edit-user/edit-user.component';
 
