@@ -4,5 +4,7 @@
     <fa-icon (click)="onDelete(task)" [ngStyle]="{'color': 'red'}" [icon]='faTimes'></fa-icon></h3>
     <p>{{ task.day }}</p>
     <p><b>Scheduled by:</b> {{ task.username }} </p>
+    <a *ngIf="isThisThePublisher && !isViewerAdmin" [routerLink]="['/edit_task', task.id]">Edit</a>
+
     <a *ngIf="isViewerAdmin" [routerLink]="['/admin/edit_task', task.id]">Edit</a>
 </div>

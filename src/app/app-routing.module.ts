@@ -9,9 +9,11 @@ import { AboutComponent } from './components/about/about.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ProfileComponent } from './components/profile/profile.component';
 import { UsersGuard } from './users.guard';
+import { EditTaskComponent } from './admin/components/edit-task/edit-task.component';
 
 const appRoutes: Routes = [
   {path: '', redirectTo: 'tasks', pathMatch: 'full'},
+  {path: 'edit_task/:id', component: EditTaskComponent},
   {path: 'about', component: AboutComponent},
   {path: 'login', component: LoginComponent, canActivate: [UsersGuard]},
   {path: 'register', component: RegisterComponent, canActivate: [UsersGuard]},

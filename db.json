@@ -18,13 +18,12 @@
       "uid": 2,
       "text": "Food Shopping",
       "day": "May 7th at 12:30pm",
-      "reminder": false,
-      "id": 3,
-      "username": "ivankirilov@gmail.com"
+      "reminder": true,
+      "id": 3
     },
     {
       "uid": 1,
-      "text": "My Task 80",
+      "text": "My Task 801",
       "day": "Today",
       "reminder": true,
       "id": 4
@@ -39,8 +38,8 @@
     },
     {
       "email": "ivankirilov@gmail.com",
-      "isAdmin": true,
-      "password": "$2a$10$pvTJNKTwMLK36nFfR7s18.KfBsHwMpJGF/8CDJW0zVrdMMpjV4Mn6",
+      "isAdmin": false,
+      "password": "$2a$10$y5ubAco2tuOVI58oScQziOak7s6s3DOYYj0pLfynSaDHTtie6RpAi",
       "id": 2
     }
   ]

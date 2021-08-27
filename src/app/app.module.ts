@@ -19,6 +19,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AdminModule } from './admin/admin.module';
 import { AuthModule } from './auth/auth.module';
 import { ProfileComponent } from './components/profile/profile.component';
+import { EditTaskComponent } from './components/edit-task/edit-task.component';
 
 
 
@@ -36,7 +37,8 @@ import { ProfileComponent } from './components/profile/profile.component';
     NavComponent,
     LoginComponent,
     PageNotFoundComponent,
-    ProfileComponent
+    ProfileComponent,
+    EditTaskComponent
   ],
   imports: [
     BrowserModule,

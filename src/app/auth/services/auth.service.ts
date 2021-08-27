@@ -38,7 +38,7 @@ export class AuthService {
   }
 
   updateUser(user_id: string | null, user: User): Observable<User> {
-    debugger;
+    //debugger;
     if (this.isAdmin()) {
       const url = `${this.apiUrl}/users/${user_id}`;
       return this.http.put<User>(url, user, httpOptions);

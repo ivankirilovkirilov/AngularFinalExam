@@ -34,6 +34,13 @@ export class TasksComponent implements OnInit {
    
   }
 
+  checkIsThisIsThePublisher(task: Task): boolean {
+    if (task.uid === parseInt(JSON.stringify(localStorage.getItem('id')).replace("\"", ""))) {
+      return true;
+    }
+    return false;
+  }
+
   checkIsAdmin(): boolean {
     return this.authService.isAdmin();
   }
