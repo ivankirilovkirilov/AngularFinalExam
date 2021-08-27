@@ -29,6 +29,24 @@ export class AuthService {
     return EMPTY;
   }
 
+  getUserById(user_id: string): Observable<User> {
+    if (this.isAdmin()) {
+      const url = `${this.apiUrl}/users/${user_id}`;
+      return this.http.get<User>(url, httpOptions);
+    }
+    return EMPTY;
+  }
+
+  updateUser(user_id: string | null, user: User): Observable<User> {
+    
+    if (this.isAdmin()) {
+      const url = `${this.apiUrl}/users/${user_id}`;
+      return this.http.put<User>(url, user, httpOptions);
+    }
+    return EMPTY;
+
+  }
+
   loggedIn(): boolean {
     return !!localStorage.getItem("token");
   }

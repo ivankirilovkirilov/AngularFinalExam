@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
 import { AuthService } from 'src/app/auth/services/auth.service';
 import { TaskService } from 'src/app/services/task.service';
 import { Task } from 'src/app/Task';
@@ -33,6 +32,10 @@ export class TasksComponent implements OnInit {
     });
     
    
+  }
+
+  checkIsAdmin(): boolean {
+    return this.authService.isAdmin();
   }
 
   deleteTask(task: Task) {

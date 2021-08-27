@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ManageTasksComponent } from './manage-tasks.component';
+import { EditTaskComponent } from './edit-task.component';
 
-describe('ManageTasksComponent', () => {
-  let component: ManageTasksComponent;
-  let fixture: ComponentFixture<ManageTasksComponent>;
+describe('EditTaskComponent', () => {
+  let component: EditTaskComponent;
+  let fixture: ComponentFixture<EditTaskComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ManageTasksComponent ]
+      declarations: [ EditTaskComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ManageTasksComponent);
+    fixture = TestBed.createComponent(EditTaskComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

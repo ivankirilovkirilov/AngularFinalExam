@@ -25,6 +25,11 @@ export class TaskService {
     return this.http.get<Task[]>(this.apiUrl);
   }
 
+  getTaskById(user_id: string): Observable<Task> {
+    const url = `${this.apiUrl}/${user_id}`;
+    return this.http.get<Task>(url);
+  }
+
   getTasksByUser(user_id: Number) {
     const url = `${this.apiUrl}?uid=${user_id}`;
     return this.http.get<Task[]>(url);
@@ -34,6 +39,11 @@ export class TaskService {
     const url = `${this.apiUrl}/${task.id}`;
     return this.http.delete<Task>(url);
   } 
+  updateTask(id: string | null, task: Task): Observable<Task> {
+    const url = `${this.apiUrl}/${id}`;
+    console.log(url);
+    return this.http.put<Task>(url, task, httpOptions);
+  }
 
   updateTaskReminder(task: Task): Observable<Task> {
     const url = `${this.apiUrl}/${task.id}`;

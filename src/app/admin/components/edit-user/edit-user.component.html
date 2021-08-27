@@ -1,0 +1,11 @@
+<form class="add-form" (ngSubmit)="onSubmit()" >
+    <div class="form-control">
+        <label for="text">Email</label>
+        <input type="text" name="email" [(ngModel)]="email" id="email"  placeholder="Add Email">
+    </div>
+    <div class="form-control form-control-check">
+        <label for="isAdmin">Set isAdmin</label>
+        <input type="checkbox" name="isAdmin" [(ngModel)]="isAdmin" id="isAdmin">
+    </div>
+    <input type="submit" value="Save Task" class="btn btn-block">
+</form>

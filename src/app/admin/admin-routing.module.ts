@@ -2,10 +2,11 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
 import { AdminComponent } from './components/admin/admin.component';
-import { ManageTasksComponent } from './components/manage-tasks/manage-tasks.component';
-import { ManageUsersComponent } from './components/manage-users/manage-users.component';
 import { AuthGuard } from '../auth/auth.guard';
 import { AdminGuard } from './admin.guard';
+import { EditTaskComponent } from './components/edit-task/edit-task.component';
+import { UsersComponent } from './components/users/users.component';
+import { EditUserComponent } from './components/edit-user/edit-user.component';
 
 const adminRoutes: Routes = [
   {
@@ -16,8 +17,9 @@ const adminRoutes: Routes = [
       {
         path: '',
         children: [
-          { path: 'users', component: ManageUsersComponent },
-          { path: 'tasks', component: ManageTasksComponent },
+          { path: 'users/:id', component: EditUserComponent},
+          { path: 'users', component: UsersComponent},
+          { path: 'edit_task/:id', component: EditTaskComponent},
           { path: '', component: AdminDashboardComponent }
         ]
       }
