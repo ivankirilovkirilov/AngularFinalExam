@@ -7,6 +7,7 @@ import { AdminGuard } from './admin.guard';
 import { EditTaskComponent } from './../components/edit-task/edit-task.component';
 import { UsersComponent } from './components/users/users.component';
 import { EditUserComponent } from './components/edit-user/edit-user.component';
+import { DeleteUserComponent } from './components/delete-user/delete-user.component';
 
 const adminRoutes: Routes = [
   {
@@ -17,6 +18,7 @@ const adminRoutes: Routes = [
       {
         path: '',
         children: [
+          { path: 'delete_user/:id', component: DeleteUserComponent},
           { path: 'users/:id', component: EditUserComponent},
           { path: 'users', component: UsersComponent},
           { path: 'edit_task/:id', component: EditTaskComponent},

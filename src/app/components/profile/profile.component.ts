@@ -19,7 +19,7 @@ export class ProfileComponent implements OnInit {
     if (this.authService.loggedIn()) {
       this.taskService.getTasksByUser(parseInt(JSON.stringify(localStorage.getItem('id')).replace("\"", ""))).subscribe((tasks) => {
         tasks.forEach((task) => {
-          task.username = "You";
+          task.username = JSON.stringify(localStorage.getItem('email')).replace("\"", "").replace("\"", "");
         })
         this.tasks = tasks;
         this.num_tasks = tasks.length;

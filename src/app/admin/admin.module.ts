@@ -8,6 +8,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule } from '@angular/forms';
 import { UsersComponent } from './components/users/users.component';
 import { EditUserComponent } from './components/edit-user/edit-user.component';
+import { DeleteUserComponent } from './components/delete-user/delete-user.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { EditUserComponent } from './components/edit-user/edit-user.component';
     AdminDashboardComponent,
     AdminComponent,
     UsersComponent,
-    EditUserComponent
+    EditUserComponent,
+    DeleteUserComponent
   ],
   imports: [
     CommonModule,

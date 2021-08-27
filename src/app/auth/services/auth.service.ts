@@ -29,6 +29,14 @@ export class AuthService {
     return EMPTY;
   }
 
+  deleteUserById(user_id: string): Observable<User> {
+    if(this.isAdmin()) {
+      const url = `${this.apiUrl}/users/${user_id}`;
+      return this.http.delete<User>(url);
+    }
+    return EMPTY;
+  }
+
   getUserById(user_id: string): Observable<User> {
     if (this.isAdmin()) {
       const url = `${this.apiUrl}/users/${user_id}`;

@@ -10,9 +10,16 @@ div {
     padding: 10px;
   }
 
-  div a {
+  div h1 div {
+    margin: 0px;
+    width: 20%;
     float: right;
-    
+    border: none;
   }
+  div h1 div a {
+    margin-right: 20px;
+  }
+
+  
   
   

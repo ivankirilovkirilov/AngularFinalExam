@@ -2,11 +2,10 @@
   "tasks": [
     {
       "uid": 1,
-      "text": "Doctors Appointment",
+      "text": "Doctors Appointment 546",
       "day": "May 5th at 2:30pm",
       "reminder": true,
-      "id": 1,
-      "username": "ivankirilovkirilov123@gmail.com"
+      "id": 1
     },
     {
       "uid": 1,
@@ -14,7 +13,7 @@
       "day": "May 6th at 2:30pm",
       "reminder": false,
       "id": 2,
-      "username": "You"
+      "username": "ivankirilovkirilov123@gmail.com"
     },
     {
       "uid": 2,
@@ -34,8 +33,8 @@
     },
     {
       "email": "ivankirilov@gmail.com",
-      "isAdmin": false,
-      "password": "$2a$10$8hyyqh.KkRsl1MnwVDX03eNgAZ/rvfiG.XbeQoXZPH/ZSUE/m7xcu",
+      "isAdmin": true,
+      "password": "$2a$10$t1EIlkE4YkcbweubbeIf.unL3.IqSygktjDbXmIb0BJTAuzIwLsFa",
       "id": 2
     }
   ]
