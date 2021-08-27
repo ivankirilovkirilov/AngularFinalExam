@@ -12,7 +12,7 @@ export class EditUserComponent implements OnInit {
   id!: string | null;
   email!: string;
   isAdmin!: boolean | undefined;
-  password!: string;
+  password: string = "";
 
   constructor(private _Activatedroute: ActivatedRoute, private authService: AuthService, private router: Router) { }
 
@@ -24,10 +24,9 @@ export class EditUserComponent implements OnInit {
       return;
     }
     this.authService.getUserById(this.id).subscribe((user) => {
-     
+      
       this.email = user.email;
       this.isAdmin = user.isAdmin;
-      this.password = user.password;
     })
   }
 
@@ -37,6 +36,11 @@ export class EditUserComponent implements OnInit {
       isAdmin: this.isAdmin,
       password: this.password
     }
+
+    if (this.email == "" || this.password == "") {
+      alert("incorrect data");
+      return;
+    } 
 
     this.authService.updateUser(this.id, updatedUser).subscribe();
     this.router.navigate(['/admin/users']);
