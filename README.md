@@ -8,7 +8,7 @@ There are 3 parts of this application:
 
 - admin
 
-Public part can be seen from everyone. This is the 'tasks' page where everybody all tasks added from the users.
+Public part can be seen from everyone. This is the 'tasks' page where everybody can see all tasks added from the users.
 
 Private part are registered users. They can create tasks and can toggle or delete all tasks that are created by them.
 
